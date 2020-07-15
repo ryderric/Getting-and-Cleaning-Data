@@ -42,6 +42,9 @@
       knitdata <- merged_data %>%
             select(subject, code, contains("mean"), contains("std"))
 
+# Add activity titles      
+      knitdata$code <- activities[knitdata$code, 2]
+      
 # Update the labels with meaningful names
       names(knitdata)[2] = "activity"
       names(knitdata)<-gsub("^t", "Time", names(knitdata))
