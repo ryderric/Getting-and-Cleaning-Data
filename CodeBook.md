@@ -4,14 +4,14 @@ The run_analysis.R script performs the data preparation followed by the steps ne
 Dataset downloaded and extracted in the folder named UCI HAR Dataset
 
 2 Read data into dataframes
-* features <- features.txt 
-* activities <- activity_labels.txt
-* s_test <- test/subject_test.txt 
-* x_test <- test/X_test.txt 
-* y_test <- test/y_test.txt 
-* s_train <- test/subject_train.txt 
-* x_train <- test/X_train.txt : 
-* y_train <- test/y_train.txt 
+* features <- features.txt - acceleromete and gyroscope measurements
+* activities <- activity_labels.txt - activities performed by volunteers
+* s_test <- test/subject_test.txt - test data for volunteers
+* x_test <- test/X_test.txt - recorded test data for features
+* y_test <- test/y_test.txt  - recorded test data for activity codes
+* s_train <- test/subject_train.txt - training data for volunteers
+* x_train <- test/X_train.txt - recorded training data for features
+* y_train <- test/y_train.txt - recorded training data for activity codes
 
 3. Merge the training and the test sets to create one data set
 * x is created by merging x_train and x_test using rbind() function
@@ -22,6 +22,7 @@ Dataset downloaded and extracted in the folder named UCI HAR Dataset
 4. Extract the mean and standard deviation for each measurement
 
 5. Update names to provide more descriptice variable names:
+* Added titles to activities column
 * All variables starting with the character f is updated to Frequency
 * All variables starting the character t is updated with Time
 * Acc is replaced with Accelerometer
@@ -29,5 +30,4 @@ Dataset downloaded and extracted in the folder named UCI HAR Dataset
 * BodyBody is replaced with Body
 * Mag is replaced with Magnitude
 
-6. Create the final data set with the average of each variable for each activity and each subject
-FinalData (180 rows, 88 columns) is created by sumarizing TidyData taking the means of each variable for each activity and each subject, after groupped by subject and activity.
+6. Create the tidyData_set with the average of each variable for each activity and each subject
