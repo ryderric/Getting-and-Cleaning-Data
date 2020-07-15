@@ -3,7 +3,7 @@
 
 This is the course project for Coursera's Getting and Cleaning Data course.
 
-# Initial data for the project is derived from [UCI HAR Dataset](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
+* Initial data for the project is derived from [UCI HAR Dataset](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 
 The included R script, run_analysis.R, conducts the following:
 1. If the data does not already exist in the working directory it will download 
